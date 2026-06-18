@@ -1,0 +1,33 @@
+class Pirilampo:
+  def __init__(self, nome, cor):
+    self.nome = nome
+    self.idade = 0
+    self.tamanho = 0
+    self.cor = cor
+    self.brilho = 0
+
+  def alterar_cor(self, cor):
+    if cor not in("amarelo","verde","vermelho"):
+      print(f"Não pode alterar para a cor {cor}!")
+      return
+
+    print(f"Antes tinha a cor {self.cor}. Agora tenho a cor {cor}.")
+
+    self.cor = cor
+
+  def alterar_intensidade(self,brilho):
+    if brilho not in (0, 101):
+      print(f"Não pode alterar para essa intensidade {brilho}!")
+      return
+
+
+    print(f"Estou com a cor {self.cor}, na intensidade {brilho}.")
+
+    self.brilho = brilho
+
+piri_1 = Pirilampo("Luciferino", "verde")
+piri_2 = Pirilampo("Vivido", "amarelo")
+
+piri_1.alterar_cor("roxo")
+piri_1.alterar_cor("amarelo")
+piri_1.alterar_intensidade(55)
